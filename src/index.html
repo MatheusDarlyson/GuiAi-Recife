@@ -1,0 +1,65 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GuiAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="center-text">
+        <h2>GuiAI Recife</h2>
+        <p>Seu Guía Turístico da Cidade do Recife</p>
+    </div>
+    <div id="body">
+        <div id="chat-overlay" class="hidden"></div>
+
+        <div id="chat-menu" class="row justify-content-center">
+            <div id="settings-circle" class="btn btn-raised">
+                <i class="material-icons">settings</i>
+            </div>
+            <div id="chat-circle" class="btn btn-raised">
+                <i class="material-icons">chat</i>
+            </div>
+        </div>
+
+        <div class="settings-box hidden">
+            <div class="chat-box-header">
+                Configurações
+                <span class="settings-box-toggle"><i class="material-icons">close</i></span>
+            </div>
+            <div class="settings-box-body">
+                <form>
+                    <label>OpenAI API KEY:</label>
+                    <input id="api-input" type="password" placeholder="API KEY" />
+                    <button type="submit" class="settings-submit" id="settings-submit"><i
+                            class="material-icons">save</i></button>
+                </form>
+            </div>
+        </div>
+        <div class="chat-box hidden">
+            <div class="chat-box-header">
+                GuiAI Recife
+                <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-logs">
+                </div>
+            </div>
+            <div class="chat-input">
+                <form>
+                    <input type="text" id="chat-input" placeholder="O que você quer conhecer hoje?..." />
+                    <button type="submit" class="chat-submit" id="chat-submit"><i
+                            class="material-icons">send</i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
